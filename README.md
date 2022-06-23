@@ -1,2 +1,2 @@
-# PracticaIos
- aplicatie
+# Practică
+
