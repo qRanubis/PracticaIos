@@ -28,8 +28,8 @@ class ViewController: UIViewController
     var AlegePrimu = Rând.X
     var AlegeAcum = Rând.X
     
-    var zero = "O"
-    var x = "X"
+    let zero = "🐱"
+    let x = "🐶"
     var board = [UIButton]()
     
     var ScorZero = 0
@@ -61,13 +61,13 @@ class ViewController: UIViewController
         if Victorie(x)
         {
             ScorX += 1
-            Rezultat(title: "X Câștigă !")
+            Rezultat(title: "🐶 Câștigă !")
         }
         
         if Victorie(zero)
         {
             ScorZero += 1
-            Rezultat(title: "Zero Câștigă !")
+            Rezultat(title: "🐱 Câștigă !")
         }
         
         if(TablăPlină())
@@ -123,7 +123,7 @@ class ViewController: UIViewController
     
     func Rezultat(title: String)
     {
-        let message = "\nZero " + String(ScorZero) + "\n\nX " + String(ScorX)
+        let message = "\nPisică: " + String(ScorZero) + "\n\nCâine: " + String(ScorX)
         let ac = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         ac.addAction(UIAlertAction(title: "Din nou", style: .default, handler: { (_) in
             self.ReseteazăTabla()
